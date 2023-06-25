@@ -1,0 +1,1953 @@
+{
+  "id": "873375bd-e49d-4dbb-bdde-a4eb5840d613",
+  "version": "2.0",
+  "name": "test-web-sesion06",
+  "url": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+  "tests": [{
+    "id": "e3491d46-1984-495f-9754-86948cd8d8b9",
+    "name": "carga-inicio",
+    "commands": [{
+      "id": "9197d01a-af59-4471-a1b2-21dbc0f3a316",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d491f92-fbec-4538-836f-f3dbbd077377",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4783e62b-af44-4a3f-925f-ac94f1d54fe3",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=banner",
+      "targets": [
+        ["id=banner", "id"],
+        ["css=#banner", "css:finder"],
+        ["xpath=//section[@id='banner']", "xpath:attributes"],
+        ["xpath=//div[@id='page-wrapper']/section", "xpath:idRelative"],
+        ["xpath=//section", "xpath:position"]
+      ],
+      "value": "Equipo 20\\nEste equipo está formado por los siguientes miembros:\\nAlejandro Tomás Soto Meca\\nDavid Hernández Carmona\\n© Untitled. All rights reserved.Design: HTML5 UP"
+    }]
+  }, {
+    "id": "d07a9fc1-62c8-403e-9d4e-4adb889a5589",
+    "name": "no-carga-inicio",
+    "commands": [{
+      "id": "da0374a7-677f-4911-a72a-9d63c6859580",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0fcc194-7dd4-42ed-8700-c41770db8ab3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a991ceaf-745e-462f-b65e-caafb021ec8e",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=banner",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//section[@id='banner']/div", "xpath:idRelative"],
+        ["xpath=//section/div", "xpath:position"]
+      ],
+      "value": "Equipo 20\\nEste equipo está formado por los siguientes miembros:\\nAlejandro Tomás Soto Meca\\nDavid Hernández Carmona\\n© Untitled. All rights reserved.Design: HTML5 UP"
+    }]
+  }, {
+    "id": "4b803fcc-43ff-4244-835b-3889e668f098",
+    "name": "boton-equipo20",
+    "commands": [{
+      "id": "7f2ef4d5-e248-4c8f-a327-33ff9941cf52",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7843d4b2-6ba8-4613-90fb-7a38b3a1666e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "07354135-391e-4b15-a25f-5868b529c0e4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Equipo 20",
+      "targets": [
+        ["linkText=Equipo 20", "linkText"],
+        ["css=#logo > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Equipo 20')]", "xpath:link"],
+        ["xpath=//h1[@id='logo']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Equipo 20')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ff2293c-b80d-43a5-8485-14866dbbc748",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=ol > li:nth-child(1)",
+      "targets": [
+        ["css=ol > li:nth-child(1)", "css:finder"],
+        ["xpath=//section[@id='banner']/div/header/ol/li", "xpath:idRelative"],
+        ["xpath=//ol/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Alejandro Tomás Soto Meca')]", "xpath:innerText"]
+      ],
+      "value": "Alejandro Tomás Soto Meca"
+    }]
+  }, {
+    "id": "b241dffa-65e6-4edb-9f55-de64883d3936",
+    "name": "no-boton-equipo20",
+    "commands": [{
+      "id": "425fa8bd-636b-4247-9a0f-40fc305e0041",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97fe6ee4-631c-4123-9afe-d1b1eab59f5c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58700f65-4bd2-49d1-a6c8-c7b15f422878",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Equipo 20",
+      "targets": [
+        ["linkText=Equipo 20", "linkText"],
+        ["css=#logo > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Equipo 20')]", "xpath:link"],
+        ["xpath=//h1[@id='logo']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Equipo 20')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f3b7e6a-8a23-4441-8152-670cdeced651",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=banner",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//section[@id='banner']/div", "xpath:idRelative"],
+        ["xpath=//section/div", "xpath:position"]
+      ],
+      "value": "Equipo 20\\nEste equipo está formado por los siguientes miembros:\\nAlejandro Tomás Soto Meca\\nDavid Hernández Carmona\\n© Untitled. All rights reserved.Design: HTML5 UP"
+    }]
+  }, {
+    "id": "516c2a70-ee89-4ae4-8dfd-3429b4a141fa",
+    "name": "boton-pagina-principal",
+    "commands": [{
+      "id": "db2ebe72-55c4-493c-9e55-ece0f84e56e8",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7cbb41e-c5e5-47ca-9232-af222d86c91e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4124bec9-30fa-4399-a7cf-2f4cf7df297b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Página principal",
+      "targets": [
+        ["linkText=Página principal", "linkText"],
+        ["css=#nav > ul > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Página principal')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'index.html')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Página principal')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95e0a4e4-0e67-41f1-b5be-50b6e0909142",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=banner",
+      "targets": [
+        ["id=banner", "id"],
+        ["css=#banner", "css:finder"],
+        ["xpath=//section[@id='banner']", "xpath:attributes"],
+        ["xpath=//div[@id='page-wrapper']/section", "xpath:idRelative"],
+        ["xpath=//section", "xpath:position"]
+      ],
+      "value": "Equipo 20\\nEste equipo está formado por los siguientes miembros:\\nAlejandro Tomás Soto Meca\\nDavid Hernández Carmona\\n© Untitled. All rights reserved.Design: HTML5 UP"
+    }]
+  }, {
+    "id": "4f0a929c-2636-43f3-9068-b91e0596bf08",
+    "name": "no-boton-pagina-principal",
+    "commands": [{
+      "id": "1f67af8c-1de7-4dfb-8dc6-9df5ae43c6df",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "516dccb1-c2ae-40a2-8fb0-ddcfe1c3f81d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1776dd86-f9db-4978-b9d0-bf6cf87ec5d8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Página principal",
+      "targets": [
+        ["linkText=Página principal", "linkText"],
+        ["css=#nav > ul > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Página principal')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'index.html')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Página principal')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "751dde62-7207-4ca6-8cd5-7cd4ce03c368",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=banner",
+      "targets": [
+        ["id=banner", "id"],
+        ["css=#banner", "css:finder"],
+        ["xpath=//section[@id='banner']", "xpath:attributes"],
+        ["xpath=//div[@id='page-wrapper']/section", "xpath:idRelative"],
+        ["xpath=//section", "xpath:position"]
+      ],
+      "value": "Equipo 20\\nEste equipo está formado por los siguientes miembros:\\nAlejandro Tomás Soto Meca\\nDavid Hernández Carmona\\n© Untitled. All rights reserved.Design: HTML5 UP"
+    }]
+  }, {
+    "id": "3740ef58-7037-4f77-aa1f-36f0fb5ee10a",
+    "name": "boton-alejandro",
+    "commands": [{
+      "id": "6c74ad8d-a494-467e-a911-c6e83effb3d5",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a87f5f9b-aa38-4288-81da-63717ac9ca7e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5381441d-5f22-48e6-9330-48515e4b982b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "495e4012-b412-43b7-9b2b-ae5ceeed3c7d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Alejandro",
+      "targets": [
+        ["linkText=Alejandro", "linkText"],
+        ["css=.dropotron > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alejandro')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'alejandro.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0543cadb-e3ad-423a-8c71-de855830fca8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//section[@id='banner']/div/header/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Alejandro Tomás Soto Meca')]", "xpath:innerText"]
+      ],
+      "value": "Alejandro Tomás Soto Meca"
+    }]
+  }, {
+    "id": "4c8a6f7a-b774-45cc-9674-ea1c6e9df359",
+    "name": "no-boton-alejandro",
+    "commands": [{
+      "id": "3a231c10-748b-43fb-99c9-7c2814232a1e",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fd883e1-8c7f-451b-8dbc-59cb536eb11a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09d5c589-cd0e-4939-aea5-64e078e4a194",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fee19bf4-c210-4ba7-bbb0-bed47e3cb20d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Alejandro",
+      "targets": [
+        ["linkText=Alejandro", "linkText"],
+        ["css=.dropotron > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alejandro')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'alejandro.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d856be2-8a8d-4485-b59f-044361466d4b",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//section[@id='banner']/div/header/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Alejandro Tomás Soto Meca')]", "xpath:innerText"]
+      ],
+      "value": "Alejandro Tomás Soto Meca"
+    }]
+  }, {
+    "id": "23b25e01-464c-45f1-8ec9-aefd733b5d95",
+    "name": "boton-david",
+    "commands": [{
+      "id": "0bf03696-c5b0-4875-b4c6-a5ef36a9323c",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f89de62b-0861-4e4d-8cac-88182da06666",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c22ea0b9-f936-4532-8727-2bb4348781a7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9e912a4-49e8-4d77-843f-5bac464f2616",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=David",
+      "targets": [
+        ["linkText=David", "linkText"],
+        ["css=.dropotron > li:nth-child(1) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'David')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'david.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd63132c-db00-4ed9-b783-095cf195319f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//section[@id='banner']/div/header/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'David Hernández Carmona')]", "xpath:innerText"]
+      ],
+      "value": "David Hernández Carmona"
+    }]
+  }, {
+    "id": "a2c13065-77ff-471b-9238-9dd8a568cc98",
+    "name": "no-boton-david",
+    "commands": [{
+      "id": "e8a79d3a-f053-4705-876d-abb75fa7333f",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec78e2be-6f70-47b0-b083-d5392681a4e6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f95766a7-0b8c-4e92-8700-eae04730d49f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1468beca-748a-4e08-9623-17b2bf84f2ac",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=David",
+      "targets": [
+        ["linkText=David", "linkText"],
+        ["css=.dropotron > li:nth-child(1) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'David')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'david.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86d6a6bf-b66c-4790-8678-47f7d01a4b78",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//section[@id='banner']/div/header/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'David Hernández Carmona')]", "xpath:innerText"]
+      ],
+      "value": "David Hernández Carmona"
+    }]
+  }, {
+    "id": "f49dd474-5e32-4cd4-8118-0649f3972dc7",
+    "name": "boton-github-repo",
+    "commands": [{
+      "id": "06897aeb-051c-4539-98f6-8769871bc9b3",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62918ed8-10a9-4d59-95d5-020b99ea8397",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d76aa7f-46e3-4b21-a80f-96f269ee3fd6",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .icon",
+      "targets": [
+        ["css=li:nth-child(1) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/AlejandroTSoto/Sesion04-2023')]", "xpath:href"],
+        ["xpath=//footer/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e61e553-c11f-47b0-9ef6-4d943156d339",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=repository-container-header",
+      "targets": [
+        ["css=.flex-auto > .d-flex", "css:finder"],
+        ["xpath=//div[@id='repository-container-header']/div/div/div", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div", "xpath:position"]
+      ],
+      "value": "AlejandroTSoto\\n/\\nSesion04-2023\\nPublic\\nPin\\nUnwatch 1\\nFork 1\\nFork your own copy of AlejandroTSoto/Sesion04-2023\\nStar 0\\nCode\\nIssues\\nPull requests\\nActions\\nProjects\\nWiki\\nSecurity\\nInsights\\nSettings"
+    }]
+  }, {
+    "id": "11213e33-56b3-4af0-bff6-e4d0e7b12eaf",
+    "name": "no-boton-github-repo",
+    "commands": [{
+      "id": "8fcdda86-233e-40dc-afff-ef3563addf1c",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02117e32-faa8-4750-81d4-efe643683fcb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d728eccc-e601-4199-9bb0-c33f75e09b2b",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .icon",
+      "targets": [
+        ["css=li:nth-child(1) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/AlejandroTSoto/Sesion04-2023')]", "xpath:href"],
+        ["xpath=//footer/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3365ad15-29bd-474c-b66e-5bc5ee23ccf6",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=repository-container-header",
+      "targets": [
+        ["id=repository-container-header", "id"],
+        ["css=#repository-container-header", "css:finder"],
+        ["xpath=//div[@id='repository-container-header']", "xpath:attributes"],
+        ["xpath=//main[@id='js-repo-pjax-container']/div", "xpath:idRelative"],
+        ["xpath=//main/div", "xpath:position"]
+      ],
+      "value": "AlejandroTSoto\\n/\\nSesion04-2023\\nPublic\\nPin\\nUnwatch 1\\nFork 1\\nFork your own copy of AlejandroTSoto/Sesion04-2023\\nStar 0\\nCode\\nIssues\\nPull requests\\nActions\\nProjects\\nWiki\\nSecurity\\nInsights\\nSettings"
+    }]
+  }, {
+    "id": "d5feaabc-b1f9-408a-b500-60c9f83fd8c5",
+    "name": "boton-documentacion-github",
+    "commands": [{
+      "id": "e78dc376-ca48-4efd-b5d4-41e2fc1e8570",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de38697c-2bcc-41a0-b0e6-a5437df15362",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5290823f-9308-4ee7-af1f-1af2b2b372ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .icon",
+      "targets": [
+        ["css=li:nth-child(2) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://docs.github.com/es')]", "xpath:href"],
+        ["xpath=//footer/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a959f04b-e8de-427b-88c7-95e77c931505",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.flex-justify-between",
+      "targets": [
+        ["css=.flex-justify-between", "css:finder"],
+        ["xpath=//div[@id='__next']/div/header/div", "xpath:idRelative"],
+        ["xpath=//header/div", "xpath:position"]
+      ],
+      "value": "Documentación de GitHub\\nVersion: Free, Pro, & Team\\nDocumentación de Github de búsqueda"
+    }]
+  }, {
+    "id": "9901df8b-5858-48ad-8d65-1de68be1e2e0",
+    "name": "no-boton-documentacion-github",
+    "commands": [{
+      "id": "bb6e72a9-d746-46a0-b3a6-082823e1387b",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7cacdc7-dfda-4fa7-827c-222612551610",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31bf6f23-da5e-4872-8926-a7d3446c4f2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .icon",
+      "targets": [
+        ["css=li:nth-child(2) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://docs.github.com/es')]", "xpath:href"],
+        ["xpath=//footer/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7720c8ae-7e25-48f7-a93d-f8424d8d9be1",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.flex-justify-between",
+      "targets": [
+        ["css=.flex-justify-between", "css:finder"],
+        ["xpath=//div[@id='__next']/div/header/div", "xpath:idRelative"],
+        ["xpath=//header/div", "xpath:position"]
+      ],
+      "value": "Documentación de GitHub\\nVersion: Free, Pro, & Team\\nDocumentación de Github de búsqueda"
+    }]
+  }, {
+    "id": "945461c8-d8fe-4dfb-977f-a660588753fe",
+    "name": "boton-repo-hmis",
+    "commands": [{
+      "id": "c300eafe-887e-4112-8008-5eac6337b18e",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4400a2c-6406-462d-af04-3dcdf820fb38",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e0f1c3b-c72d-4848-8471-3101877989df",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(3) > .icon",
+      "targets": [
+        ["css=li:nth-child(3) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/ualhmis/')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30bdf6f0-014b-43f4-8cf0-e253821506a3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.flex-1 > .color-fg-muted > div",
+      "targets": [
+        ["css=.pt-4", "css:finder"],
+        ["xpath=//main/div/header/div", "xpath:position"]
+      ],
+      "value": "Grado en Ingeniería Informática -Universidad de Almería"
+    }]
+  }, {
+    "id": "0e58489d-b82d-4723-8e9a-129c7bd8121c",
+    "name": "no-boton-repo-hmis",
+    "commands": [{
+      "id": "bcdd30e2-37f1-4272-8ada-a27a11d4b581",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37bc2529-1b12-41c4-8a83-b36ed094bb90",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed327b6f-9c6e-4eaa-962b-92726b503a36",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(3) > .icon",
+      "targets": [
+        ["css=li:nth-child(3) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/ualhmis/')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86de3282-9f75-42db-8e5c-552690763c4a",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.flex-1 > .color-fg-muted > div",
+      "targets": [
+        ["css=.pt-4", "css:finder"],
+        ["xpath=//main/div/header/div", "xpath:position"]
+      ],
+      "value": "Grado en Ingeniería Informática -Universidad de Almería"
+    }]
+  }, {
+    "id": "98034a1f-c853-4158-b738-112fdea0deae",
+    "name": "boton-git",
+    "commands": [{
+      "id": "d8361eb5-1d6c-4058-a231-b3541db817a4",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5939947-2a38-47dd-998c-a2e4df541b99",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c30fc61d-34c0-4822-85c7-ac0425e14e8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-git-alt",
+      "targets": [
+        ["css=.fa-git-alt", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://git-scm.com/book/en/v2')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "436816bb-ba4b-477f-8141-963ffec4d0e5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//div[@id='main']/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Book')]", "xpath:innerText"]
+      ],
+      "value": "Book"
+    }]
+  }, {
+    "id": "9f811436-24e9-4087-99a7-e72b648ff496",
+    "name": "no-boton-git",
+    "commands": [{
+      "id": "d0f444e7-0dfa-4dbd-9051-04459be92cb0",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d91840b-9d63-4c4d-b8b8-43b7a771eb02",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0692aee-4d1c-44f7-9494-02d5d8d23777",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-git-alt",
+      "targets": [
+        ["css=.fa-git-alt", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://git-scm.com/book/en/v2')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "406a3ded-6e20-44bf-895b-1ce6aced2327",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=h1",
+      "targets": [
+        ["id=main", "id"],
+        ["css=#main", "css:finder"],
+        ["xpath=//div[@id='main']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "Book"
+    }]
+  }, {
+    "id": "c872d2a0-fc09-4246-93da-d73d5040dd9e",
+    "name": "boton-azure",
+    "commands": [{
+      "id": "2abb1ae4-0a79-495a-b5d5-09dd06f4dff7",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81473ba9-9168-4470-98d0-cd7a7c8fe8d8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2c456c0-c421-445b-ba6e-2865809eb345",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(5) > .icon",
+      "targets": [
+        ["css=li:nth-child(5) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://portal.azure.com/#allservices')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71a201a6-798f-4a91-81ed-29b1d878d7f9",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=_weave_e_56",
+      "targets": [
+        ["id=_weave_e_56", "id"],
+        ["css=#\\_weave_e_56", "css:finder"],
+        ["xpath=//span[@id='_weave_e_56']", "xpath:attributes"],
+        ["xpath=//div[@id='_weave_e_57']/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": "Todo"
+    }]
+  }, {
+    "id": "b010dcec-fb43-491d-9f1e-3b20e9480889",
+    "name": "no-boton-azure",
+    "commands": [{
+      "id": "3bdb0dab-e7c4-40ce-8dd7-33e4b432e7ac",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1aa4c0c-eaff-4dd1-b4d7-452bc569947d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3eb883e5-cda7-40f0-a4f0-6585eb99c34b",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(5) > .icon",
+      "targets": [
+        ["css=li:nth-child(5) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://portal.azure.com/#allservices')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bca5bf5-f538-445a-92dc-f8f5d2f11103",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=_weave_e_56",
+      "targets": [
+        ["id=_weave_e_56", "id"],
+        ["css=#\\_weave_e_56", "css:finder"],
+        ["xpath=//span[@id='_weave_e_56']", "xpath:attributes"],
+        ["xpath=//div[@id='_weave_e_57']/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": "Todo"
+    }]
+  }, {
+    "id": "52658525-a4bb-49c5-90c9-e5280fa77b99",
+    "name": "boton-documentacion-azure",
+    "commands": [{
+      "id": "c829c65f-6113-445e-bd4c-24f7d151df26",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddc68a89-ec42-4934-8148-744df8e6482b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad2f0a5a-018f-4ea4-bbf4-69be496ce86b",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(6) > .icon",
+      "targets": [
+        ["css=li:nth-child(6) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://docs.microsoft.com/es-es/azure/?product=popular')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21c90f38-8e78-4310-92e0-e2607e8169af",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=hero-title",
+      "targets": [
+        ["id=hero-title", "id"],
+        ["css=#hero-title", "css:finder"],
+        ["xpath=//h1[@id='hero-title']", "xpath:attributes"],
+        ["xpath=//section[@id='hero']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Documentación de Azure')]", "xpath:innerText"]
+      ],
+      "value": "Documentación de Azure"
+    }]
+  }, {
+    "id": "bb687442-ee8d-4176-ae5b-229563488abd",
+    "name": "no-boton-documentacion-azure",
+    "commands": [{
+      "id": "7bd5c1ff-1726-49c8-af49-42bac4893f6a",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69f837a5-2036-4cc8-8509-402ccae43544",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d69e2686-6cf6-43a6-aa0f-7acabb7b59b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(6) > .icon",
+      "targets": [
+        ["css=li:nth-child(6) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://docs.microsoft.com/es-es/azure/?product=popular')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05c05165-f154-4d53-8da6-3d284de29228",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=hero-title",
+      "targets": [
+        ["id=hero-title", "id"],
+        ["css=#hero-title", "css:finder"],
+        ["xpath=//h1[@id='hero-title']", "xpath:attributes"],
+        ["xpath=//section[@id='hero']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Documentación de Azure')]", "xpath:innerText"]
+      ],
+      "value": "Documentación de Azure"
+    }]
+  }, {
+    "id": "9835bc6f-2c47-4ce4-994c-e1268d0a5a99",
+    "name": "boton-html5",
+    "commands": [{
+      "id": "9f2b2657-3230-4c55-82fe-5792ea36b75d",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "090efeba-b0a4-4412-8589-c1ab009fffc0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18b75efe-4c6a-4dae-b517-5aaebee32580",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HTML5 UP",
+      "targets": [
+        ["linkText=HTML5 UP", "linkText"],
+        ["css=.copyright a", "css:finder"],
+        ["xpath=//a[contains(text(),'HTML5 UP')]", "xpath:link"],
+        ["xpath=//footer[@id='footer']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://html5up.net']", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'HTML5 UP')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48b7cbf1-1777-4d62-a13c-953430159693",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.about",
+      "targets": [
+        ["css=.about", "css:finder"],
+        ["xpath=//header[@id='header']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "... makes spiffy HTML5\\nsite templates that are:"
+    }]
+  }, {
+    "id": "3939e7bd-fc43-40ca-a2b0-8167e0da75b7",
+    "name": "no-boton-html5",
+    "commands": [{
+      "id": "63793360-5bec-480c-ad74-54e7a736d9e6",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f917be5-1642-4518-a48b-e205ca16d662",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44541df1-f692-4873-bd56-579d983b21ea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HTML5 UP",
+      "targets": [
+        ["linkText=HTML5 UP", "linkText"],
+        ["css=.copyright a", "css:finder"],
+        ["xpath=//a[contains(text(),'HTML5 UP')]", "xpath:link"],
+        ["xpath=//footer[@id='footer']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://html5up.net']", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'HTML5 UP')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c44121a6-2ee9-4a16-b13a-fe7e94bfb4b3",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.about > strong",
+      "targets": [
+        ["css=.about > strong", "css:finder"],
+        ["xpath=//header[@id='header']/p/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"]
+      ],
+      "value": "spiffy HTML5\\nsite templates"
+    }]
+  }, {
+    "id": "8f3d96d5-1f27-4038-aed3-424401872c58",
+    "name": "boton-alejandro-github",
+    "commands": [{
+      "id": "947f3a37-b09e-4787-824e-47d9b71b0665",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9bdd5c6-b161-4fdf-bf03-8f0d5f4ead9a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "436e9c1f-b0c1-4912-be98-704145edda45",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe4fdd85-a39e-4839-9d70-afa102426d59",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Alejandro",
+      "targets": [
+        ["linkText=Alejandro", "linkText"],
+        ["css=.dropotron > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alejandro')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'alejandro.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a3c9a26-e308-4e92-a044-e652252c396c",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .icon",
+      "targets": [
+        ["css=li:nth-child(1) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/AlejandroTSoto')]", "xpath:href"],
+        ["xpath=//footer/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "872d5b99-bffc-4e14-9fb2-c54b6aa8c4b2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.p-name",
+      "targets": [
+        ["css=.p-name", "css:finder"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Alejandro Tomás Soto Meca')]", "xpath:innerText"]
+      ],
+      "value": "Alejandro Tomás Soto Meca"
+    }]
+  }, {
+    "id": "c26c3fd2-563c-4fb8-a0d3-9c7185d1e38a",
+    "name": "no-boton-alejandro-github",
+    "commands": [{
+      "id": "22204c95-d097-4ac8-800e-f17745757c46",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a62bc82b-145c-4aac-80a9-33c073c8acb5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ddce4a6-6bdb-41e6-b516-17a562959b00",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f77e8680-ea91-4674-b444-bb824edc15dc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Alejandro",
+      "targets": [
+        ["linkText=Alejandro", "linkText"],
+        ["css=.dropotron > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alejandro')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'alejandro.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d8cb1c6-a797-4718-8619-06aa17d3aa44",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .icon",
+      "targets": [
+        ["css=li:nth-child(1) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/AlejandroTSoto')]", "xpath:href"],
+        ["xpath=//footer/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af63342a-8534-4e52-993c-517e3583dd8c",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.p-name",
+      "targets": [
+        ["css=.p-name", "css:finder"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Alejandro Tomás Soto Meca')]", "xpath:innerText"]
+      ],
+      "value": "Alejandro Tomás Soto Meca"
+    }]
+  }, {
+    "id": "ec02af74-6bcc-4265-9f10-bdb92ca04450",
+    "name": "boton-alejandro-repo",
+    "commands": [{
+      "id": "767325d5-df1b-422d-b26d-1526f548c3f5",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76a81c5a-d4d7-477a-b97b-9a4de1ee8c84",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a2e93b4-f7fc-404a-862f-172e88569511",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a3b9756-156d-4781-843c-b06ba987c840",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Alejandro",
+      "targets": [
+        ["linkText=Alejandro", "linkText"],
+        ["css=.dropotron > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alejandro')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'alejandro.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6febb0c4-07e9-414a-95c5-1b1447410eca",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .icon",
+      "targets": [
+        ["css=li:nth-child(2) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/AlejandroTSoto/Sesion04-2023')]", "xpath:href"],
+        ["xpath=//footer/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d69d1e6b-8ea9-4d80-839a-6e638650fe3f",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=repository-container-header",
+      "targets": [
+        ["id=repository-container-header", "id"],
+        ["css=#repository-container-header", "css:finder"],
+        ["xpath=//div[@id='repository-container-header']", "xpath:attributes"],
+        ["xpath=//main[@id='js-repo-pjax-container']/div", "xpath:idRelative"],
+        ["xpath=//main/div", "xpath:position"]
+      ],
+      "value": "AlejandroTSoto\\n/\\nSesion04-2023\\nPublic\\nPin\\nUnwatch 1\\nFork 1\\nFork your own copy of AlejandroTSoto/Sesion04-2023\\nStar 0\\nCode\\nIssues\\nPull requests\\nActions\\nProjects\\nWiki\\nSecurity\\nInsights\\nSettings"
+    }]
+  }, {
+    "id": "adc1b4f1-5d1d-4e11-a6d0-263d393e88dc",
+    "name": "no-boton-alejandro-repo",
+    "commands": [{
+      "id": "3cdf1827-ec44-41e1-bd66-12d1259de152",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "631cd0fc-1dc8-4cbd-b571-aa42da7fce71",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f0b9f7c-f922-4c2f-a25c-09cb76ff1223",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2953b13d-1930-4488-aaeb-55139ecb0a66",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Alejandro",
+      "targets": [
+        ["linkText=Alejandro", "linkText"],
+        ["css=.dropotron > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alejandro')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'alejandro.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "960d98bc-e198-422e-bcd7-07b8b333e7bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .icon",
+      "targets": [
+        ["css=li:nth-child(2) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/AlejandroTSoto/Sesion04-2023')]", "xpath:href"],
+        ["xpath=//footer/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9a2940e-0cf4-41d5-a866-e23a5fa7b3a4",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=repository-container-header",
+      "targets": [
+        ["css=.flex-auto > .d-flex", "css:finder"],
+        ["xpath=//div[@id='repository-container-header']/div/div/div", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div", "xpath:position"]
+      ],
+      "value": "AlejandroTSoto\\n/\\nSesion04-2023\\nPublic\\nPin\\nUnwatch 1\\nFork 1\\nFork your own copy of AlejandroTSoto/Sesion04-2023\\nStar 0\\nCode\\nIssues\\nPull requests\\nActions\\nProjects\\nWiki\\nSecurity\\nInsights\\nSettings"
+    }]
+  }, {
+    "id": "a9f3a7d2-eb9e-406b-962c-8f8b18f9c8c3",
+    "name": "boton-alejandro-html5",
+    "commands": [{
+      "id": "bd6534ac-2e96-41f8-bd54-1b0a69f5628c",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ceceb8b-cb73-4ce8-9976-34cc46e17583",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11b456ef-602d-4bdf-92e7-81d99956c710",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c8a3f9e-f669-4f53-a867-4158959460f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Alejandro",
+      "targets": [
+        ["linkText=Alejandro", "linkText"],
+        ["css=.dropotron > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alejandro')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'alejandro.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2c02971-d95a-4a2a-b91c-1db28ff9c769",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HTML5 UP",
+      "targets": [
+        ["linkText=HTML5 UP", "linkText"],
+        ["css=.copyright a", "css:finder"],
+        ["xpath=//a[contains(text(),'HTML5 UP')]", "xpath:link"],
+        ["xpath=//footer[@id='footer']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://html5up.net']", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'HTML5 UP')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4857981d-1b73-46e8-a358-2c340ec1e954",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.about > strong",
+      "targets": [
+        ["css=.about > strong", "css:finder"],
+        ["xpath=//header[@id='header']/p/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"]
+      ],
+      "value": "spiffy HTML5\\nsite templates"
+    }]
+  }, {
+    "id": "e16b6b76-1f03-4541-ad78-a5ccdf49768e",
+    "name": "no-boton-alejandro-html5",
+    "commands": [{
+      "id": "cb221b03-b32d-438a-9f48-37a81a18ec3d",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "438d12b9-412a-435a-8616-8ca1b26d1075",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "864693d4-1f3a-4875-82cd-1db9f0253194",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ee9667e-6e62-4a5a-92f3-a9b2173c292c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Alejandro",
+      "targets": [
+        ["linkText=Alejandro", "linkText"],
+        ["css=.dropotron > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alejandro')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'alejandro.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1752137b-5f2b-4a2b-80a5-d7a741fb0c08",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HTML5 UP",
+      "targets": [
+        ["linkText=HTML5 UP", "linkText"],
+        ["css=.copyright a", "css:finder"],
+        ["xpath=//a[contains(text(),'HTML5 UP')]", "xpath:link"],
+        ["xpath=//footer[@id='footer']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://html5up.net']", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'HTML5 UP')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb5681df-84da-416e-a34b-62c9a9a04dd5",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.about > strong",
+      "targets": [
+        ["css=.about > strong", "css:finder"],
+        ["xpath=//header[@id='header']/p/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"]
+      ],
+      "value": "spiffy HTML5\\nsite templates"
+    }]
+  }, {
+    "id": "e3e558e7-87da-4c48-bc7a-3c7577a21baf",
+    "name": "boton-david-github",
+    "commands": [{
+      "id": "d36a0fd5-3a81-450c-bd23-6f7517aa2804",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65dbaace-d842-4e0f-960c-1067e9a8e4ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8bb1a8d-b7cf-4e0b-9ab3-435041f484aa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52bc1eec-018f-4e28-be6d-3c1a1656fdec",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=David",
+      "targets": [
+        ["linkText=David", "linkText"],
+        ["css=.dropotron > li:nth-child(1) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'David')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'david.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "417596be-d76f-4c18-8d79-7ad33df4524b",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .icon",
+      "targets": [
+        ["css=li:nth-child(1) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/davinson19')]", "xpath:href"],
+        ["xpath=//footer/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e46aede5-b726-4ef5-9a0a-098fc13df133",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.p-name",
+      "targets": [
+        ["css=.p-name", "css:finder"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'David Hernandez Carmona')]", "xpath:innerText"]
+      ],
+      "value": "David Hernandez Carmona"
+    }]
+  }, {
+    "id": "769d909e-ed9a-47ab-b742-8b07b4a460ad",
+    "name": "no-boton-david-github",
+    "commands": [{
+      "id": "e65557cb-f7d7-44e2-8396-3577c95e9675",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1962474f-2069-4527-9fea-80f1f35abf9b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66cc8472-51b9-441b-bd42-dc82dbd43ce1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cf363b6-34d6-4835-9fff-20f10ac102bd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=David",
+      "targets": [
+        ["linkText=David", "linkText"],
+        ["css=.dropotron > li:nth-child(1) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'David')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'david.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c838933-9bbf-4047-97a6-8266b4f8dd8a",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > .icon",
+      "targets": [
+        ["css=li:nth-child(1) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/davinson19')]", "xpath:href"],
+        ["xpath=//footer/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de3b4a40-a73a-4061-934b-49190dda465b",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.p-name",
+      "targets": [
+        ["css=.p-name", "css:finder"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'David Hernandez Carmona')]", "xpath:innerText"]
+      ],
+      "value": "David Hernandez Carmona"
+    }]
+  }, {
+    "id": "e16015f1-f72c-445e-aaa6-8aa434af1ac1",
+    "name": "boton-david-repo",
+    "commands": [{
+      "id": "17994f9b-1e2d-4199-a11c-797eea27105b",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "deb3067e-f1f8-4f98-b754-e5077d0c6943",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90e505cc-7b9a-4e89-9917-885177ac929d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5a91a8a-f057-45e7-bf0c-5a90a150a27a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=David",
+      "targets": [
+        ["linkText=David", "linkText"],
+        ["css=.dropotron > li:nth-child(1) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'David')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'david.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afbb03d4-720f-401a-bcf6-1ecfec875c2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .icon",
+      "targets": [
+        ["css=li:nth-child(2) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/AlejandroTSoto/Sesion04-2023')]", "xpath:href"],
+        ["xpath=//footer/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f6286ca-86a4-4800-ba99-188fed54567f",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=repository-container-header",
+      "targets": [
+        ["css=.flex-auto > .d-flex", "css:finder"],
+        ["xpath=//div[@id='repository-container-header']/div/div/div", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div", "xpath:position"]
+      ],
+      "value": "AlejandroTSoto\\n/\\nSesion04-2023\\nPublic\\nPin\\nUnwatch 1\\nFork 1\\nFork your own copy of AlejandroTSoto/Sesion04-2023\\nStar 0\\nCode\\nIssues\\nPull requests\\nActions\\nProjects\\nWiki\\nSecurity\\nInsights\\nSettings"
+    }]
+  }, {
+    "id": "23b1e2c7-371e-4090-ae87-a8ccfda1e775",
+    "name": "no-boton-david-repo",
+    "commands": [{
+      "id": "37a88a25-f81b-4fb3-bad9-c1e001744477",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55c888be-da7f-4855-98a8-c5b6fd4a8c51",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e68c660e-eff8-41f3-be5a-8d85c00d76f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb9c2aab-ebb7-46eb-a3d6-11d98c6b2c60",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=David",
+      "targets": [
+        ["linkText=David", "linkText"],
+        ["css=.dropotron > li:nth-child(1) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'David')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'david.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1e8f593-03b8-45f5-ae30-09c4e092acee",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .icon",
+      "targets": [
+        ["css=li:nth-child(2) > .icon", "css:finder"],
+        ["xpath=//footer[@id='footer']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://github.com/AlejandroTSoto/Sesion04-2023')]", "xpath:href"],
+        ["xpath=//footer/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efb85f71-ed57-4bc7-9667-4b3b02ab6084",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=repository-container-header",
+      "targets": [
+        ["css=.flex-auto > .d-flex", "css:finder"],
+        ["xpath=//div[@id='repository-container-header']/div/div/div", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div", "xpath:position"]
+      ],
+      "value": "AlejandroTSoto\\n/\\nSesion04-2023\\nPublic\\nPin\\nUnwatch 1\\nFork 1\\nFork your own copy of AlejandroTSoto/Sesion04-2023\\nStar 0\\nCode\\nIssues\\nPull requests\\nActions\\nProjects\\nWiki\\nSecurity\\nInsights\\nSettings"
+    }]
+  }, {
+    "id": "e9a2d193-93ad-4e74-9649-b772b38486c6",
+    "name": "boton-david-html5",
+    "commands": [{
+      "id": "5adbd6c6-2199-4e49-9f7b-9bdbad077cfa",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "446ccf0c-cbc6-4ad9-82e5-742707f355a9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8db9c2c2-71b5-4c01-bd05-58c3c3727303",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6ce7107-e2b8-435b-b44a-0ce0b0ab9d56",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=David",
+      "targets": [
+        ["linkText=David", "linkText"],
+        ["css=.dropotron > li:nth-child(1) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'David')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'david.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8c2d91d-0ac3-42b7-af40-f37be674b690",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HTML5 UP",
+      "targets": [
+        ["linkText=HTML5 UP", "linkText"],
+        ["css=.copyright a", "css:finder"],
+        ["xpath=//a[contains(text(),'HTML5 UP')]", "xpath:link"],
+        ["xpath=//footer[@id='footer']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://html5up.net']", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'HTML5 UP')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "725183b4-6540-485a-b3e7-0e5d1b8e9f05",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.about > strong",
+      "targets": [
+        ["css=.about > strong", "css:finder"],
+        ["xpath=//header[@id='header']/p/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"]
+      ],
+      "value": "spiffy HTML5\\nsite templates"
+    }]
+  }, {
+    "id": "3b93c5a4-da36-4b52-87f5-8c3fbf126c5a",
+    "name": "no-boton-david-html5",
+    "commands": [{
+      "id": "ba1c8408-62ec-4f49-a3f8-3ff9c71ea825",
+      "comment": "",
+      "command": "open",
+      "target": "https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0ebb1fb-8f4b-4165-ac2b-f0fc6bf61c01",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e24f820-5146-4033-8258-3d00558a606c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Miembros",
+      "targets": [
+        ["linkText=Miembros", "linkText"],
+        ["css=.opener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Miembros')]", "xpath:link"],
+        ["xpath=//nav[@id='nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Miembros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "758101c1-792d-4d61-9090-8b5dae8f63d9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=David",
+      "targets": [
+        ["linkText=David", "linkText"],
+        ["css=.dropotron > li:nth-child(1) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'David')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'david.html')])[2]", "xpath:href"],
+        ["xpath=//body/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "565db241-1d51-4f14-bf83-28ad1e25aeb7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HTML5 UP",
+      "targets": [
+        ["linkText=HTML5 UP", "linkText"],
+        ["css=.copyright a", "css:finder"],
+        ["xpath=//a[contains(text(),'HTML5 UP')]", "xpath:link"],
+        ["xpath=//footer[@id='footer']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://html5up.net']", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'HTML5 UP')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0d0b3d8-9e87-4589-ae3e-9fd56bb2bd90",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.about > strong",
+      "targets": [
+        ["css=.about > strong", "css:finder"],
+        ["xpath=//header[@id='header']/p/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"]
+      ],
+      "value": "spiffy HTML5\\nsite templates"
+    }]
+  }],
+  "suites": [{
+    "id": "235808be-08c0-496e-a83b-f178a4f897b6",
+    "name": "carga-inicial",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e3491d46-1984-495f-9754-86948cd8d8b9", "d07a9fc1-62c8-403e-9d4e-4adb889a5589"]
+  }, {
+    "id": "e11d954f-936c-41bd-a2be-962050ed1c2d",
+    "name": "botones-superiores",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3740ef58-7037-4f77-aa1f-36f0fb5ee10a", "23b25e01-464c-45f1-8ec9-aefd733b5d95", "4b803fcc-43ff-4244-835b-3889e668f098", "516c2a70-ee89-4ae4-8dfd-3429b4a141fa", "4c8a6f7a-b774-45cc-9674-ea1c6e9df359", "a2c13065-77ff-471b-9238-9dd8a568cc98", "b241dffa-65e6-4edb-9f55-de64883d3936", "4f0a929c-2636-43f3-9068-b91e0596bf08"]
+  }, {
+    "id": "1685f5cf-bfa2-4975-baca-249a8f742cf4",
+    "name": "botones-inferiores-principal",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f49dd474-5e32-4cd4-8118-0649f3972dc7", "11213e33-56b3-4af0-bff6-e4d0e7b12eaf", "d5feaabc-b1f9-408a-b500-60c9f83fd8c5", "9901df8b-5858-48ad-8d65-1de68be1e2e0", "c872d2a0-fc09-4246-93da-d73d5040dd9e", "52658525-a4bb-49c5-90c9-e5280fa77b99", "98034a1f-c853-4158-b738-112fdea0deae", "9835bc6f-2c47-4ce4-994c-e1268d0a5a99", "945461c8-d8fe-4dfb-977f-a660588753fe", "b010dcec-fb43-491d-9f1e-3b20e9480889", "bb687442-ee8d-4176-ae5b-229563488abd", "3939e7bd-fc43-40ca-a2b0-8167e0da75b7", "9f811436-24e9-4087-99a7-e72b648ff496", "0e58489d-b82d-4723-8e9a-129c7bd8121c"]
+  }, {
+    "id": "85b2988b-ed42-4fc5-b15d-20627dbe72ce",
+    "name": "botones-inferiores-alejandro",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8f3d96d5-1f27-4038-aed3-424401872c58", "a9f3a7d2-eb9e-406b-962c-8f8b18f9c8c3", "ec02af74-6bcc-4265-9f10-bdb92ca04450", "e16b6b76-1f03-4541-ad78-a5ccdf49768e", "adc1b4f1-5d1d-4e11-a6d0-263d393e88dc", "c26c3fd2-563c-4fb8-a0d3-9c7185d1e38a"]
+  }, {
+    "id": "61a6673f-cedc-45c7-9e76-6087969caee0",
+    "name": "botones-inferiores-david",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e16015f1-f72c-445e-aaa6-8aa434af1ac1", "e9a2d193-93ad-4e74-9649-b772b38486c6", "e3e558e7-87da-4c48-bc7a-3c7577a21baf", "23b1e2c7-371e-4090-ae87-a8ccfda1e775", "3b93c5a4-da36-4b52-87f5-8c3fbf126c5a", "769d909e-ed9a-47ab-b742-8b07b4a460ad"]
+  }],
+  "urls": ["https://hmis2023-sesion04-freeweb.azurewebsites.net/index.html"],
+  "plugins": []
+}
